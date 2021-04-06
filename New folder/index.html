@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
+
+<body>
+    <nav>
+        <div class="menu">
+            <input type="checkbox" id="check">
+            <div class="logo"><a href="#">LOGO</a></div>
+            <ul>
+                <label class="btn cancel" for="check"><i class="fas fa-times"></i></label>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>
+        </div>
+        </div>
+    </nav>
+    <div class="landingContainer">
+        <img src="bg.jpg">
+        <div class="glassContainer">
+            <div class="cover">
+                <div class="details">
+                    <h1>BEST<br>MUSIC<br>SOUND</h1>
+                </div>
+                <div class="media">
+                    <h3>Click me</h3>
+                    <img src="play.png" id="icon" style="max-width: 40px;">
+
+                </div>
+            </div>
+        </div>
+        <div id="footer">Copyright@2021</div>
+        <audio id="music">
+            <source src="music.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+
+    <script>
+        var music = document.getElementById("music");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (music.paused) {
+                music.play();
+                icon.src = "stop.png";
+            } else {
+                music.pause();
+                icon.src = "pause.png"
+            }
+        }
+    </script>
+</body>
+
+</html>
